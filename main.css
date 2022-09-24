@@ -1,96 +1,80 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins");
+
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
 }
+
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    font-family: 'Bitter', serif;
-    font-family: 'Cabin', sans-serif;
-    font-family: 'Edu QLD Beginner', cursive;
-    font-family: 'Edu SA Beginner', cursive;
-    font-family: 'Edu TAS Beginner', cursive;
-    font-family: 'Roboto Slab', serif;
-    font-family: 'Signika Negative', sans-serif;
+  background: #34495e;
+  color: #ecf0f1;
 }
-main {
-    background-color: rgb( 248, 219, 122);
-    box-shadow: 0 0 20px 5px rgb(146, 145, 145);
-    border-radius: 5px;
-    height: 250px;
-    width: 400px;
+
+
+.flex-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-family: "Poppins", sans-serif;
+  margin: 0 auto;
+  max-width: 400px;
+  max-height: 800px;
+  background: #ededed;
+  margin: 40px auto;
+  color: #2a2a2a;
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px;
 }
-.side-clip {
-    position: absolute;
-    filter: drop-shadow(-2px -2px 5px rgba(50, 50, 0, 0.521));
+
+h1 {
+  margin: 10px;
 }
-.clip {
-    position: absolute;
-    content: ' ';
-    clip-path: polygon(52% 75%, 0% 100%, 100% 100%);
-    background-color: rgb(248, 219, 122);
-    border-radius: 5px;
-    transform: translateX(223px) translateY(18px) rotateZ(134deg);
-    height: 200px;
-    width: 100px;
+
+h2 {
+  margin: 10px;
+  font-size: 24px;
 }
-.round {
-    height: 100%;
-    width: 250px;
-    transform: translateX(-100px);
-    position: relative;
-    left: 0;
-    top: 0;
-    transform-origin: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+span {
+  color: #2ecc71;
+  margin: 10px;
+  font-size: 36px;
 }
-.round .coinlogo {
-    box-shadow: 0 0 20px 5px rgba(18, 18, 18, 0.515);
-    position: absolute;
-    background-color: rgb(150, 110, 37);
-    height: 200px;
-    width: 200px;
-    border-radius: 50%;
+
+.btn {
+  outline: none;
+  border: none;
+  cursor: pointer;
+  background-color: #fcad26;
+  font-size: 14px;
+  font-weight: 300;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 5px 20px;
+  margin: 20px auto;
+  border-radius: 10px;
+  box-shadow: 0 6px #efa424;
+  transform: scale(1.1);
+  transform-origin: 0 0;
+
+  /* &:hover {
+    box-shadow: 0 4px #efa424;
+    top: 2px;
+  }
+  &:active {
+    box-shadow: 0 4px #efa424;
+    transform: translatex(6px);
+  } */
 }
-.round .coinlogo img {
-    height: 100%;
-    width: 100%;
+
+.btn:hover {
+    box-shadow: 0 4px #efa424;
+    top: 2px;
 }
-.info {
-    transform: translateX(165px) translateY(-153px);
-    box-shadow: 0 0 10px 1px rgba(87, 87, 87, 0.631);
-    border-radius: 3px;
-    background-color: white;
-    width: 230px;
-    height: 150px;
-}
-.name {
-    text-transform: uppercase;
-    font-size: 1.5rem;
-    position: absolute;
-    transform: translateY(20px) translateX(20px);
-}
-  
-.currency-type {
-    transform: translateY(20px) translateX(170px);
-}
-  
-.line {
-    position: absolute;
-    transform: translateX(15px) translateY(30px);
-    opacity: 0.8;
-    color: gray;
-}
-  
-.price {
-    transform: translateY(60px) translateX(1rem);
-    font-size: 2.5rem;
-}
-.currency {
-    position: absolute;
+
+.btn:active {
+    box-shadow: 0 4px #efa424;
+    transform: translatex(6px);
 }

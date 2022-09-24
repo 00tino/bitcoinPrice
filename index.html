@@ -15,25 +15,12 @@
   </head>
   <body>
     <main>
-      <div class="round">
-        <div class="coinlogo">
-          <img
-            src="https://assets.coingecko.com/coins/images/1/large/bitcoin.png?1547033579"
-            alt=""
-          />
-        </div>
-      </div>
-
-      <div class="info">
-        <div class="name">bitcoin</div>
-        <select class="currency-type">
-          <option value="usd">USD</option>
-          <option value="eur">EUR</option>
-        </select>
-        <div class="line">-------------------------------------</div>
-        <div class="price"></div>
-        <div class="side-clip">
-          <div class="clip"></div>
+      <div class="container">
+        <div class="flex-container">
+          <h1><i class="fa fa-btc fa-2x"></i>Bitcoin</h1>
+          <h2>Current Price</h2>
+          <span id="currentPrice"></span>
+          <button id="btn" class="btn">Refresh Data</button>
         </div>
       </div>
     </main>

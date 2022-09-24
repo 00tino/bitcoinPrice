@@ -1,31 +1,20 @@
-var liveprice = {
-    async: true,
-    scroosDomain: true,
-    url:
-      'https://api.coingecko.com/api/v3/coins/bitcoin?localization=false&tickers=false&community_data=false&developer_data=false&sparkline=false',
-    method: 'GET',
-    headers: {},
-  }
-  
-  $.ajax(liveprice).done(function (response) {
-    const name = document.querySelector('.name')
-    name.innerHTML = response.id
-    const currencytype = document.querySelector('.currency-type')
-    const price = document.querySelector('.price')
-    const currency = document.querySelector('.currency')
-  
-    price.innerHTML = response.market_data.current_price.usd + '$'
-  
-    currencytype.addEventListener('click', (e) => {
-      if (currencytype.value == 'eur') {
-        price.innerHTML = response.market_data.current_price.eur + '€'
-        currency.innerHTML = 'EUR'
-      } else if (currencytype.value == 'usd') {
-        price.innerHTML = response.market_data.current_price.usd + '$'
-        currency.innerHTML = 'USD'
-      }
-    })
-  
-    console.log(response)
-  })
+var button = document.querySelector("#btn");
+var url = "https://api.coindesk.com/v1/bpi/currentprice.json";
+var currency = "USD";
+// var price = data.bpi[currency].rate;
+// var currentPrice =   currentPrice.innerText = price + " " + currency;
+window.onload = getPrice();
+function getPrice() {
+    fetch(url)
+      .then(function(promise) {
+        return promise.json();
+      })
+      .then(function(data) {
+        var price = data.bpi[currency].rate;
+        currentPrice.innerText = price + ` ${currency}`;
+      });
+}
+ btn.addEventListener("click", function(){
+   getPrice();
+ });
   
